@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- stylesheets 👍 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts 👍 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <div class="wrapper flex">
+      <div class="steps-map">
+        <ul class="steps-links flex">
+          <li class="active flex" data-index="1">
+            <div class="step-no text-mini">1</div>
+            <div class="step-text text-mini desktop-only">
+              <div class="title">
+                <h5>STEP 1</h5>
+              </div>
+              <div class="inner-content">
+                <h3>Your Info</h3>
+              </div>
+            </div>
+          </li>
+          <li class="flex" data-index="2">
+            <div class="step-no text-mini">2</div>
+            <div class="step-text text-mini desktop-only">
+              <div class="title">
+                <h5>STEP 2</h5>
+              </div>
+              <div class="inner-content">
+                <h3>SELECT PLAN</h3>
+              </div>
+            </div>
+          </li>
+          <li class="flex" data-index="3">
+            <div class="step-no text-mini">3</div>
+            <div class="step-text text-mini desktop-only">
+              <div class="title">
+                <h5>Step 3</h5>
+              </div>
+              <div class="inner-content">
+                <h3>ADD-ONS</h3>
+              </div>
+            </div>
+          </li>
+          <li class="flex" data-index="4">
+            <div class="step-no text-mini">4</div>
+            <div class="step-text text-mini desktop-only">
+              <div class="title">
+                <h5>Step 4</h5>
+              </div>
+              <div class="inner-content">
+                <h3>Summary</h3>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="steps-content flexcol swiper swiper-no-swiping">
+        <div class="steps-wrapper swiper-wrapper">
+          <div class="step-slide swiper-slide" data-step="1">
+            <div class="heading">
+              <div class="text-large">
+                <h1>Personal info</h1>
+              </div>
+              <div class="text-mini">
+                <p>Please Provide your name, email, address, and phone</p>
+              </div>
+            </div>
+            <div class="form">
+              <form action="" class="flexcol" id="step-one-form">
+                <div class="input">
+                  <label for="inputUserName">Name</label>
+                  <input type="text" id="inputUserName" placeholder="e.g. Stephen King">
+                </div>
+                <div class="input">
+                  <label for="inputEmail">Email Address</label>
+                  <input type="email" id="inputEmail" placeholder="e.g. stephenking@lorem.com">
+                </div>
+                <div class="input">
+                  <label for="inputPhoneNumber">Phone Number</label>
+                  <input type="text" id="inputPhoneNumber" placeholder="e.g. +1 (546) 123-4123">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="step-slide swiper-slide" data-step="2">
+            <div class="heading">
+              <div class="text-large">
+                <h1>Select Your Plan</h1>
+              </div>
+              <div class="text-mini">
+                <p>You have the option of monthly or yearly billing</p>
+              </div>
+            </div>
+            <ul class="plans flex">
+              <li class="flex active">
+                <div class="image"><img src="assets/images/icon-arcade.svg" alt=""></div>
+                <div class="text det-plan">
+                  <h3>Arcade</h3>
+                  <p>$<span class="total">9</span>/<span class="state">mo</span></p>
+                  <strong class="hidden">2 Months Free</strong>
+                </div>
+              </li>
+              <li class="flex">
+                <div class="image"><img src="assets/images/icon-advanced.svg" alt=""></div>
+                <div class="text det-plan">
+                  <h3>Advanced</h3>
+                  <p>$<span class="total">12</span>/<span class="state">mo</span></p>
+                  <strong class="hidden">2 Months Free</strong>
+
+                </div>
+              </li>
+              <li class="flex">
+                <div class="image"><img src="assets/images/icon-pro.svg" alt=""></div>
+                <div class="text det-plan">
+                  <h3>Pro</h3>
+                  <p>$<span class="total">15</span>/<span class="state">mo</span></p>
+                  <strong class="hidden">2 Months Free</strong>
+                </div>
+              </li>
+            </ul>
+            <div class="control-billing flex">
+              <strong class="monthly active">Monthly</strong>
+              <div class="control-billing-btn"><span data-billing="monthly"></span></div>
+              <strong class="yearly">Yearly</strong>
+            </div>
+          </div>
+          <div class="step-slide swiper-slide" data-step="3">
+            <div class="heading">
+              <div class="text-large">
+                <h1>Pick add-ons</h1>
+              </div>
+              <div class="text-mini">
+                <p>Add-ons help enhance your gaming experience</p>
+              </div>
+            </div>
+            <div class="form">
+              <form action="" class="flexcol pick-ads plans">
+                <div class="input flex active">
+                  <div class="checkbox"><img src="assets/images/icon-checkmark.svg" alt=""></div>
+                  <div class="text">
+                    <h3>Online service</h3>
+                    <p>Access to multiplayer games</p>
+                  </div>
+                  <div class="text det-plan">
+                    <p>+$<span class="total">1</span>/<span class="state">mo</span></p>
+                  </div>
+                </div>
+                <div class="input flex">
+                  <div class="checkbox"><img src="assets/images/icon-checkmark.svg" alt=""></div>
+                  <div class="text">
+                    <h3>Larger Storage</h3>
+                    <p>Extra 1TB of cloud save</p>
+                  </div>
+                  <div class="text det-plan">
+                    <p>+$<span class="total">2</span>/<span class="state">mo</span></p>
+                  </div>
+                </div>
+                <div class="input flex">
+                  <div class="checkbox"><img src="assets/images/icon-checkmark.svg" alt=""></div>
+                  <div class="text">
+                    <h3>Customizable Profile</h3>
+                    <p>custom theme on your profile</p>
+                  </div>
+                  <div class="text det-plan">
+                    <p>+$<span class="total">2</span>/<span class="state">mo</span></p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="step-slide swiper-slide" data-step="4">
+            <div class="heading">
+              <div class="text-large">
+                <h1>Finishing up</h1>
+              </div>
+              <div class="text-mini">
+                <p>Double-check wverything looks Ok before confirming</p>
+              </div>
+            </div>
+            <ul class="summary flexcol">
+              <li class="flex  main-plan">
+                <div class="left">
+                  <h3>Arcade (Monthly)</h3>
+                  <a href="#">Change</a>
+                </div>
+                <div class="text det-plan">
+                  <p>$<span class="total">9</span>/<span class="state">mo</span> </p>
+                </div>
+              </li>
+              <li>
+                <ul class="services flexcol">
+
+                </ul>
+              </li>
+            </ul>
+            <div class="flex text det-plan full-price">
+              <div class="service-name text-mini">Total</div>
+              <p>+$<span class="total"></span>/<span class="state">mo</span></p>
+            </div>
+          </div>
+          <div class="step-slide swiper-slide">
+            <div class="finished-message flexcol">
+              <img src="assets/images/icon-thank-you.svg" alt="">
+              <div class="text-large">
+                <h1>Thank You</h1>
+              </div>
+              <div class="text-mini">
+                <p>Thanks For Confirming your subscription we hope You have fun using our platform, if you ever need support, please fell free to email us at support@loremgaing.com.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="control-buttons">
+          <div class="swiper-button-prev" id="prev-button">Go Back</div>
+          <div class="swiper-button-next" id="next-button">Next Step</div>
+        </div>
+      </div>
+    </div>        
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="main.js">
+  </script>
+</body>
+</html>
